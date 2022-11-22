@@ -3,13 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-import requests
-"""
-chrome_browser = webdriver.Chrome()
-chrome_browser.maximize_window()
-chrome_browser.get('https://demo.seleniumeasy.com/basic-first-form-demo.html')
 
-"""
 
 service = Service(".\chromedriver.exe")
 options = webdriver.ChromeOptions()
@@ -26,4 +20,5 @@ user_message.send_keys("I AM THE BOSS")
 show_message_button.click()
 output_message = driver.find_element(By.ID, "display")
 user_button = driver.find_element(By.CSS_SELECTOR, '.btn')
+time.sleep(10)
 driver.quit()
